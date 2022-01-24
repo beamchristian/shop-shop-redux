@@ -10,8 +10,12 @@ import { UPDATE_PRODUCTS } from '../../utils/actions';
 import { idbPromise } from '../../utils/helpers';
 
 function ProductList() {
+  // redux
+  const state = useSelector(state => {
+    return state;
+  });
   const dispatch = useDispatch();
-  const productList = useSelector(state => state.ProductList);
+
   // const [state, dispatch] = useStoreContext();
 
   const { currentCategory } = state;
